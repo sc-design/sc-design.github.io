@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LogisClick</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+</head>
+<body>
+	<div id="fade" class="black_overlay"></div>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<a href="#" class="nav-usuario pull-right"><span>Logout</span><i class="ftn icon-logout"></i></a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="ftn icon-logo-LogisClick"></i></a>
+			</div>
+		</div>
+	</nav><!--NAVBAR-->
+
+	<div class="nav-dashboard sidebar">
+		<ul class="nav-sidebar">
+			<li><a href="index.html"><i class="ftn icon-dashboard"></i><small>Resumen</small></a></li>
+			<li id="m-status"><a href="#" ><i class="ftn icon-doc-status"></i><small>Estados</small></a>
+				<ul class="sub-menu">
+					<li><a href="estadoFlota.html"><i class="ftn icon-flota"></i><small>Flota</small></a></li>
+					<li><a href="estadoDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+				</ul>
+			</li>
+			<li><a href="historico.html"><i class="ftn icon-program"></i><small>Histórico</small></a></li>
+			<li id="m-admin"><a href="#"><i class="ftn icon-settings"></i><small>Administrar</small></a>
+				<ul class="sub-menu">
+					<li><a href="listaDocumentos.html" class="i-active"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+					<li><a href="clientes.html"><i class="ftn icon-clientes"></i><small>Clientes</small></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!--NAV SIDEBAR-->
+
+	<div class="detalle">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="#" class="btn b-generico b-colapsar"><i class="ftn icon-colapsar"></i></a>
+				</div>
+			</div>
+			<div class="row margin-t-xs">				
+				
+				<div class="col-md-12">
+					<a href="#" id="btn-add-item-ind" class="btn btn-link pull-right"><i class="fa fa-plus-square"></i> Agregar Item</a>
+					<h4>N° Documento : 448177</h4>
+				</div>
+
+				<div class="col-md-12 doc-list wrp-items">
+
+					<table class="table table-responsive t-detalle-doc">
+						<colgroup>
+						<col width="15%" />
+						<col width="75%" />
+						<col width="10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Código Item</th>
+							<th class="text-center">Descripción</th>
+							<th class="text-center"></th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>000000001</td>
+							<td class="text-center">LT100001</td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default edit"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+					</tbody>
+				</table><!--FIN TABLE-->
+				
+			</div>
+		</div>
+	</div>
+</div><!--FIN PANEL DETALLE-->
+
+
+<div id="filtros" class="row">
+	<form action="" class="form-inline">
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="N° de Guía o Documento...">
+		</div>
+		<div class="form-group">
+			<label for="" class="label-arriba">&nbsp;</label>
+			<button type="submit" class="btn b-generico b-buscar"><i class="ftn icon-buscar"></i></button>
+		</div>
+
+	</form>
+</div><!--FIN FILTROS-->
+
+
+<div class="container-fluid container-data">
+
+	<div class="row  margin-t-lg">
+		<div class="col-md-12">
+			<a href="#" class="btn pull-right b-descargar text-center"><i class="ftn icon-descargar"></i>Plantilla carga masiva</a>
+			<a href="#" class="btn b-generico pull-left add-doc" data-toggle="modal" data-target="#n-doc"><i class="ftn icon-add-documento"></i>Nuevo...</a>
+			<input type="file" class="filestyle masiva pull-left" data-input="false" data-badge="false" data-buttonText="Carga masiva">
+		</div>
+		<div class="col-md-12 margin-t-xxs">
+			<div class="panel panel-default">
+				<div class="panel-heading">DOCUMENTOS : [CLIENTE]</div>
+				<div class="panel-body">
+					<div class="alert alert-info text-center"><i class="fa fa-frown-o fa-2x"></i> No se encontraron resultados...</div>
+					<table class="table table-responsive">
+						<colgroup>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col/>
+						<col width="60px"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Cliente</th>
+							<th class="text-center">N° Documento</th>
+							<th class="text-center">N° Entrega</th>
+							<th class="text-center">Estado</th>
+							<th class="text-center">Fecha Emisión</th>
+							<th class="text-center">Fecha Entrega</th>
+							<th class="text-center">Geocerca Origen</th>
+							<th class="text-center">Geocerca Destino</th>
+							<th class="text-center">Items</th>
+							<th class="text-center">PPU Vehículo</th>
+							<th class="text-center">Chofer</th>
+							<th class="text-center">Descripción</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center"><a href="#" class="verItems">448177</a></td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center">448177</td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center">448177</td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center">448177</td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center">448177</td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Comercial Valentino e Hijos</td>
+							<td class="text-center">448177</td>
+							<td class="text-center">987469</td>
+							<td class="text-center">Creado</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">21/05/2015</td>
+							<td class="text-center">[origen]</td>
+							<td class="text-center">[destino]</td>
+							<td class="text-center">7</td>
+							<td class="text-center">VF8387</td>
+							<td class="text-center">Juan Perez</td>
+							<td class="text-center"></td>
+							<td class="text-right">
+								<div class="btn-group" role="group">
+									<button type="button" class="btn btn-default" data-toggle="modal" data-target="#n-doc"><i class="fa fa-pencil"></i></button>
+									<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--p class="alert alert-info text-center">No tiene documentos cargados</p-->
+			</div>
+		</div>
+	</div>
+</div><!--LINEA 1-->
+
+</div>
+<!--MODAL-->
+<div id="n-doc" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="NuevoDocumento">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<form action="" class="form-horizontal">
+				<div class="modal-header">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs " role="tablist">
+						<li role="presentation" class="active"><a href="#info-doc" role="tab" data-toggle="tab">Información del Documento</a></li>
+						<li role="presentation"><a href="#info-items" role="tab" data-toggle="tab">Items Asociados</a></li>
+					</ul>
+
+				</div>
+				<div class="modal-body">
+					<div class="tab-content">
+						<div id="info-doc" rol="tabpanel" class="tab-pane active">
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Cliente</label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[CLIENTE]</option> 
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Número Documento</label>
+								<div class="col-md-4"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Número Entrega</label>
+								<div class="col-md-4"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Estado Documento </label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[ESTADO]</option> 
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Fecha de Emision</label>
+								<div class="col-md-4"><input type="text" class="form-control" data-provide="datepicker"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Fecha de entrega</label>
+								<div class="col-md-4"><input type="text" class="form-control" data-provide="datepicker"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-sm-3 control-label">Geocerca Origen</label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[NOM GEOCERCA]</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Geocerca Destino</label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[NOM GEOCERCA]</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">PPU Vehículo</label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="" selected>Seleccione...</option>
+										<option value="">[PATENTE]</option>
+									</select>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Chofer</label>
+								<div class="col-md-4">
+									<select class="form-control" id="">
+										<option value="Seleccione" selected>Seleccione... </option>
+										<option value="">[NOM CHOFER]</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="" class="col-md-3 control-label">Descripción</label>
+								<div class="col-md-4"><textarea name="" class="form-control" rows="2"></textarea></div>
+							</div>
+						</div><!--FIN DOCUMENTO-->
+
+						<div id="info-items" rol="tabpanel" class="tab-pane">
+							<div class="container-fluid">
+								<div class="row" id="listaItems">
+
+									<div class="col-md-8 col-md-offset-2">
+										<div class="row">
+											<div class="col-md-12 text-right"><a href="#" id="btn-add-item" class="btn btn-link"><i class="fa fa-plus-square"></i> Agregar Item</a></div>
+											<div class="col-md-5"><label for="">Código</label></div>
+											<div class="col-md-6"><label for="">Descripción</label></div>
+										</div>
+									</div><!--GLOSA-->
+
+									<div class="col-md-8 col-md-offset-2 row-item">
+										<div class="row">
+											<div class="col-md-5"><input type="text" class="form-control"></div>
+											<div class="col-md-6"><input type="text" class="form-control"></div>
+											<div class="col-md-1"></div>
+										</div>
+									</div><!--ROW-ITEM-->
+
+									<div class="col-md-8 col-md-offset-2 row-item">
+										<div class="row">
+											<div class="col-md-5"><input type="text" class="form-control"></div>
+											<div class="col-md-6"><input type="text" class="form-control"></div>
+											<div class="col-md-1"><a href="#" id="btn-del-item" class="btn alerta"><i class="fa fa-trash fa-lg"></i></a></div>
+										</div>
+									</div><!--ROW-ITEM-->
+
+								</div>
+							</div>
+						</div><!--FIN ITEMS-->
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn b-generico" data-dismiss="modal">Crear</button>
+				</div>
+			</form>
+		</div>
+	</div><!--FIN DIALOG-->
+</div>
+<!--MODAL-->
+
+
+<!--MODAL AGREGAR ITEM-->
+<div class="addItem">
+	<div class="container-fluid">
+		<form action="">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-5"><label for="">Código</label></div>
+						<div class="col-md-7"><label for="">Descripción</label></div>
+					</div>
+				</div><!--GLOSA-->
+
+				<div class="col-md-12 row-item">
+					<div class="row">
+						<div class="col-md-5"><input type="text" class="form-control"></div>
+						<div class="col-md-7"><input type="text" class="form-control"></div>
+					</div>
+				</div><!--ROW-ITEM-->
+
+				<div class="col-md-12 text-center cont-btn">
+					<button type="button" class="btn btn-link" id="cancelItem">Cancelar</button>
+					<button type="button" class="btn b-generico" id="saveItem">[Agregar] o [Guardar]</button>
+				</div>
+
+			</div>
+		</form>
+	</div>
+</div>
+<!--MODAL AGREGAR ITEM-->
+
+<!--JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--BOTÓN BROWSE FILE-->
+<script src="assets/js/bootstrap-filestyle.min.js"></script>
+
+<script src="assets/js/funciones.js"></script>
+
+<script>
+	$("#m-admin > ul.sub-menu").slideToggle(500);
+</script>
+</body>
+</html>
+

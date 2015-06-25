@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LogisClick</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	<link rel="stylesheet" href="assets/css/datepicker3.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<a href="#" class="nav-usuario pull-right"><span>Logout</span><i class="ftn icon-logout"></i></a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="ftn icon-logo-LogisClick"></i></a>
+			</div>
+		</div>
+	</nav><!--NAVBAR-->
+
+	<div class="nav-dashboard sidebar">
+		<ul class="nav-sidebar">
+			<li><a href="index.html"><i class="ftn icon-dashboard"></i><small>Resumen</small></a></li>
+			<li id="m-status"><a href="#" ><i class="ftn icon-doc-status"></i><small>Estados</small></a>
+				<ul class="sub-menu">
+					<li><a href="estadoFlota.html"><i class="ftn icon-flota"></i><small>Flota</small></a></li>
+					<li><a href="estadoDocumentos.html" class="i-active"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+				</ul>
+			</li>
+			<li><a href="historico.html"><i class="ftn icon-program"></i><small>Histórico</small></a></li>
+			<li id="m-admin"><a href="#"><i class="ftn icon-settings"></i><small>Administrar</small></a>
+				<ul class="sub-menu">
+					<li><a href="listaDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+					<li><a href="clientes.html"><i class="ftn icon-clientes"></i><small>Clientes</small></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!--NAV SIDEBAR-->
+
+	
+	<div class="container-fluid container-data">
+
+		<div class="row  margin-t-md">
+			<div class="col-md-12">
+				<a href="javascript:history.back(-1);" class="btn b-generico b-volver pull-left"><i class="ftn icon-atras"></i></a>
+				<div class="form-group doc-select">
+					<label for="n-doc">N° Documento : </label>
+					<select class="selectpicker" data-style="sel-filtro" style="display:none;">
+						<option selected>LT56525</option>
+						<option>LT56526</option>
+						<option>LT56527</option>
+						<option>LT56528</option>
+						<option>LT56529</option>
+						<option>LT56530</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">DETALLE DE DOCUMENTO</div>
+					<div class="panel-body">
+
+						<table class="table table-responsive table-detalle-docs">
+							<tbody>
+								<tr>
+									<th>Cliente</th>
+									<td>[NOMBRE]</td>
+								</tr>
+								<tr>
+									<th>N° de Entrega</th>
+									<td>[NUMERO]</td>
+								</tr>
+								<tr>
+									<th>Estado</th>
+									<td>Entrega Parcial <i class="fa fa-check parcial"></i></td>
+								</tr>
+								<tr>
+									<th>Fecha Emisión</th>
+									<td>05/06/2015</td>
+								</tr>
+								<tr>
+									<th>Fecha Entrega</th>
+									<td>05/06/2015</td>
+								</tr>
+								<tr>
+									<th>Descripción</th>
+									<td>LT56525</td>
+								</tr>
+								
+								<tr>
+									<th>Items</th>
+									<td>7</td>
+
+								</tr>
+								<tr>
+									<th>Origen</th>
+									<td>[ORIGEN]</td>
+								</tr>
+								<tr>
+									<th>Destino</th>
+									<td>[DESTINO]</td>
+								</tr>
+								<tr>
+									<th>PPU Vehículo</th>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<th>Rut Chofer</th>
+									<td>12.365.656-8</td>
+								</tr>
+								<tr>
+									<th>Descripción</th>
+									<td>LT56525</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div><!--DETALLES DOCUMENTO-->
+
+			<div class="col-md-5">
+				<div class="panel panel-default">
+					<div class="panel-heading">DETALLE DE ÍTEMS EN GUÍA</div>
+					<div class="panel-body">
+
+						<table class="table table-responsive">
+							<thead>
+								<tr>
+									<th>Código</th>
+									<th>Descripción</th>
+									<th>Estado</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega exitosa <i class="fa fa-check exitosa"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega exitosa <i class="fa fa-check exitosa"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega exitosa <i class="fa fa-check exitosa"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega con reparos <i class="fa fa-check reparos"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega exitosa <i class="fa fa-check exitosa"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega exitosa <i class="fa fa-check exitosa"></i></td>
+								</tr>
+								<tr>
+									<td>LAPTFY6J03E616742</td>
+									<td>LT56525</td>
+									<td>Entrega rechazada <i class="fa fa-times rechazo"></i></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div><!--ITEMS-->
+
+			<div class="col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">HISTORIAL DE ESTADOS DOCUMENTO</div>
+					<div class="panel-body">
+						<div class="tl-container">
+							<div class="evento">
+								<small>09:00</small>
+								<p>Inicial o Creado</p>
+							</div>
+							<div class="evento">
+								<small>11:00</small>
+								<p>En Ruta</p>
+							</div>
+							<div class="evento">
+								<small datetime="2006-06-30">15:00</small>
+								<p>En Cliente</p>
+							</div>
+							<div class="evento">
+								<small datetime="2006-06-30">15:45</small>
+								<p>Entrega Parcial <i class="fa fa-check reparos"></i></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!--JS-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
+
+<script src="assets/js/funciones.js"></script>
+
+
+<!--GRAFICOS-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="assets/js/graph.js"></script>
+<script>
+	$("#m-status > ul.sub-menu").slideToggle(500);
+</script>
+</body>
+</html>

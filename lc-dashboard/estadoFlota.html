@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LogisClick</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+</head>
+<body>
+	<div id="fade" class="black_overlay"></div>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<a href="#" class="nav-usuario pull-right"><span>Logout</span><i class="ftn icon-logout"></i></a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="ftn icon-logo-LogisClick"></i></a>
+			</div>
+		</div>
+	</nav><!--NAVBAR-->
+
+	<div class="nav-dashboard sidebar">
+		<ul class="nav-sidebar">
+			<li><a href="index.html"><i class="ftn icon-dashboard"></i><small>Resumen</small></a></li>
+			<li id="m-status"><a href="#"><i class="ftn icon-doc-status"></i><small>Estados</small></a>
+				<ul class="sub-menu">
+					<li><a href="estadoFlota.html" class="i-active"><i class="ftn icon-flota"></i><small>Flota</small></a></li>
+					<li><a href="estadoDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+				</ul>
+			</li>
+			<li><a href="historico.html"><i class="ftn icon-program"></i><small>Histórico</small></a></li>
+			<li id="m-admin"><a href="#"><i class="ftn icon-settings"></i><small>Administrar</small></a>
+				<ul class="sub-menu">
+					<li><a href="listaDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+					<li><a href="clientes.html"><i class="ftn icon-clientes"></i><small>Clientes</small></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!--NAV SIDEBAR-->
+
+	<div id="filtros" class="row">
+		<form action="" class="form-inline">
+			<div class="form-group">
+				<label for="" class="label-arriba">Estados</label>
+				<select class="selectpicker" data-style="sel-filtro" style="display:none;">
+					<option selected>Todos los estados</option>
+					<option>Creado</option>
+					<option>En ruta</option>
+					<option>En cliente</option>
+					<option>Entregado</option>
+					<option>Entregado con reparos</option>
+					<option>Rechazados</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="" class="label-arriba">PPU Vehículo</label>
+				<select class="selectpicker" data-style="sel-filtro" style="display:none;">
+					<option selected>Todos los Vehículos</option>
+					<option>GF8397</option>
+					<option>VF5258</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="" class="label-arriba">&nbsp;</label>
+				<button type="submit" class="btn b-generico b-buscar"><i class="ftn icon-buscar"></i></button>
+			</div>
+
+		</form>
+	</div><!--FIN FILTROS-->
+	
+
+	<div class="detalle">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<a href="#" class="btn b-generico b-colapsar"><i class="ftn icon-colapsar"></i></a>
+				</div>
+			</div>
+			<div class="row margin-t-xs">
+
+				<div class="col-md-12">
+					<div id="g-map"></div>
+				</div><!--FIN MAPA-->
+				
+
+				<div class="col-md-12 wrp-items">
+					<table class="table table-responsive t-detalle-doc">
+						<thead>
+							<tr>
+								<th>N° Doc.</th>
+								<th class="text-center">Cliente</th>
+								<th class="text-center">Items</th>
+								<th class="text-center">Fecha Entrega</th>
+								<th class="text-center"></th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>01100</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">7 <span class="rechazo" data-toggle="tooltip" title="Item Rechazado">(1)</span></td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="detalleDocumento.html" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01101</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center"><span class="rechazo" data-toggle="tooltip" title="Entrega fuera de plazo">14/04/2015 - 10:02hrs</span></td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+
+							<tr>
+								<td>01102</td>
+								<td class="text-center">Kobacks Plaza Sur</td>
+								<td class="text-center">1</td>
+								<td class="text-center">14/04/2015 - 10:02hrs</td>
+								<td class="text-center"><a href="#" class="btn b-generico btn-xs">DETALLES</a></td>
+							</tr>
+						</tbody>
+					</table><!--FIN TABLE-->
+
+				</div>
+			</div>
+		</div>
+	</div><!--FIN PANEL DETALLE-->
+	
+	<div class="container-fluid container-data">
+
+
+		<div class="row  margin-t-lg">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">ESTADO DE LA FLOTA : <strong class="date">25-06-2015</strong></div>
+					<div class="panel-body">
+						<div class="alert alert-info text-center"><i class="fa fa-frown-o fa-2x"></i> No se encontraron resultados...</div>
+						<table class="table table-responsive table-estado">
+							<thead>
+								<tr>
+									<th></th>
+									<th class="text-center"><div id="dTotal"></div></th>
+									<th class="text-center"><div id="dRuta"></div></th>
+									<th class="text-center"><div id="dProgreso"></div></th>
+									<th class="text-center"><div id="dEntregados"></div></th>
+									<th class="text-center"><div id="dPendientes"></div></th>
+									<th class="text-center"><div id="dParciales"></div></th>
+									<th class="text-center"><div id="dRechazados"></div></th>
+									<th class="text-center"><div id="dOnTime"></div></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>PPU Vehículo</th>
+									<th class="text-center">Total Documentos</th>
+									<th class="text-center">En Ruta</th>
+									<th class="text-center">Progreso</th>
+									<th class="text-center">Entregados</th>
+									<th class="text-center">Pendientes</th>
+									<th class="text-center">Entregas Parciales</th>
+									<th class="text-center">Rechazados</th>
+									<th class="text-center">On Time</th>
+								</tr>
+								<tr>
+									<td><a href="#" class="nPatente">VF8394</a></td>
+									<td class="text-center">4</td>
+									<td class="text-center">0</td>
+									<td class="text-center">75%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">1</td>
+									<td class="text-center">75%</td>
+								</tr>
+								<tr>
+									<td>BDKX68</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">100%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0</td>
+									<td class="text-center">100%</td>
+								</tr>
+								<tr>
+									<td>BFXT97</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+								</tr>
+								<tr>
+									<td>CRYC58</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+								</tr>
+								<tr>
+									<td>VG8409</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+								</tr>
+								<tr>
+									<td>YS4976</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+									<td class="text-center">1</td>
+									<td class="text-center">1</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0</td>
+									<td class="text-center">0%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!--LINEA 1-->
+
+	</div>
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap-select.js"></script>
+	<script src="assets/js/jquery.floatThead.min.js"></script>
+	<script src="assets/js/funciones.js"></script>
+	
+	<!--GOOGLE MAPS-->
+	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script src="assets/js/gmaps.js"></script>
+	<script>
+		var map = new GMaps({
+			el: '#g-map',
+			lat: -33.4615451,
+			lng: -70.6122179
+		});
+
+
+		map.addMarker({
+			lat: -33.4615451,
+			lng: -70.6122179,
+			title: 'Casa Matriz',
+			infoWindow: {
+				content: '<p>Carmen Covarrubias 862, Ñuñoa, Santiago</p>'
+			}
+		});
+
+		
+		$("#m-status > ul.sub-menu").slideToggle(500);		
+
+</script>
+
+<!--GRAFICOS-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="assets/js/graph.js"></script>
+
+</body>
+</html>

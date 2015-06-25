@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LogisClick</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-select.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<a href="#" class="nav-usuario pull-right"><span>Logout</span><i class="ftn icon-logout"></i></a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="ftn icon-logo-LogisClick"></i></a>
+			</div>
+		</div>
+	</nav><!--NAVBAR-->
+
+	<div class="nav-dashboard sidebar">
+		<ul class="nav-sidebar">
+			<li><a href="index.html"><i class="ftn icon-dashboard"></i><small>Resumen</small></a></li>
+			<li id="m-status"><a href="#" ><i class="ftn icon-doc-status"></i><small>Estados</small></a>
+				<ul class="sub-menu">
+					<li><a href="estadoFlota.html"><i class="ftn icon-flota"></i><small>Flota</small></a></li>
+					<li><a href="estadoDocumentos.html" class="i-active"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+				</ul>
+			</li>
+			<li><a href="historico.html"><i class="ftn icon-program"></i><small>Histórico</small></a></li>
+			<li id="m-admin"><a href="#"><i class="ftn icon-settings"></i><small>Administrar</small></a>
+				<ul class="sub-menu">
+					<li><a href="listaDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+					<li><a href="clientes.html"><i class="ftn icon-clientes"></i><small>Clientes</small></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!--NAV SIDEBAR-->
+
+	<div id="filtros" class="row">
+			<form action="" class="form-inline">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="N° de Guía o Documento...">
+				</div>
+				<div class="form-group">
+					<label for="" class="label-arriba">Estados</label>
+					<select class="selectpicker" data-style="sel-filtro" style="display:none;">
+						<option selected>Todos los estados</option>
+						<option>Creado</option>
+						<option>En ruta</option>
+						<option>En cliente</option>
+						<option>Entregado</option>
+						<option>Entregado con reparos</option>
+						<option>Rechazados</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="label-arriba">&nbsp;</label>
+					<button type="submit" class="btn b-generico b-buscar"><i class="ftn icon-buscar"></i></button>
+				</div>
+
+			</form>
+	</div><!--FIN FILTROS-->
+
+	<div class="container-fluid container-data">
+
+		<div class="row  margin-t-lg">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">ESTADO DE LOS DOCUMENTOS : <strong class="date">25-06-2015</strong></div>
+					<div class="panel-body">
+						<div class="alert alert-info text-center"><i class="fa fa-frown-o fa-2x"></i> No se encontraron resultados...</div>
+						<table class="table table-responsive">
+							<thead>
+								<tr>
+									<th>N° Documento</th>
+									<th>Cliente</th>
+									<th>Estado</th>
+									<th>Items</th>
+									<th>Fecha Emisión</th>
+									<th>Fecha Entrega</th>
+									<th>Origen</th>
+									<th>Destino</th>
+									<th>PPU Vehículo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><a href="detalleDocumento.html">448177</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td>En Ruta</td>
+									<td>7</td>
+									<td>05-06-2015</td>
+									<td>05-06-2015</td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<td><a href="#">448178</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td>Entrega Exitosa<i class="fa fa-check exitosa"></i></td>
+									<td>7</td>
+									<td>03-06-2015</td>
+									<td class="alerta"><span data-toggle="tooltip" title="Entrega fuera de plazo">05-06-2015</span></td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<td><a href="#">448179</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td>Creado</td>
+									<td>7</td>
+									<td>05-06-2015</td>
+									<td>05-06-2015</td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<td><a href="#">448180</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td>En Ruta</td>
+									<td>7</td>
+									<td>05-06-2015</td>
+									<td>05-06-2015</td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<td><a href="#">448181</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td class="alerta">Rechazado <i class="fa fa-times rechazada"></i></td>
+									<td>7</td>
+									<td>05-06-2015</td>
+									<td>05-06-2015</td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+								<tr>
+									<td><a href="#">448182</a></td>
+									<td>Kovaks Plaza Sur</td>
+									<td>Parcial <i class="fa fa-check parcial"></i></td>
+									<td>7 <span class="rechazo" data-toggle="tooltip" title="Item Rechazado">(1)</span></td>
+									<td>05-06-2015</td>
+									<td>05-06-2015</td>
+									<td>Junaplas</td>
+									<td>AlfaChile</td>
+									<td>ZP2265</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div><!--LINEA 1-->
+
+	</div>
+	<!--JS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<!--SELECT-->
+	<script src="assets/js/bootstrap-select.js"></script>
+
+	<!--GRAFICOS-->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="assets/js/graph.js"></script>
+
+	<script src="assets/js/funciones.js"></script>
+
+	<script>
+		$("#m-status > ul.sub-menu").slideToggle(500);
+	</script>
+</body>
+</html>

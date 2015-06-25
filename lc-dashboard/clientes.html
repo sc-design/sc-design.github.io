@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LogisClick</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/jquery.treegrid.css">
+	<link rel="stylesheet" href="assets/css/dashboard.css">
+	<link rel="stylesheet" href="assets/css/fontello.css">
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<a href="#" class="nav-usuario pull-right"><span>Logout</span><i class="ftn icon-logout"></i></a>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="ftn icon-logo-LogisClick"></i></a>
+			</div>
+		</div>
+	</nav><!--NAVBAR-->
+
+	<div class="nav-dashboard sidebar">
+		<ul class="nav-sidebar">
+			<li><a href="index.html"><i class="ftn icon-dashboard"></i><small>Resumen</small></a></li>
+			<li id="m-status"><a href="#" ><i class="ftn icon-doc-status"></i><small>Estados</small></a>
+				<ul class="sub-menu">
+					<li><a href="estadoFlota.html"><i class="ftn icon-flota"></i><small>Flota</small></a></li>
+					<li><a href="estadoDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+				</ul>
+			</li>
+			<li><a href="historico.html"><i class="ftn icon-program"></i><small>Histórico</small></a></li>
+			<li id="m-admin"><a href="#"><i class="ftn icon-settings"></i><small>Administrar</small></a>
+				<ul class="sub-menu">
+					<li><a href="listaDocumentos.html"><i class="ftn icon-doc-list"></i><small>Documentos</small></a></li>
+					<li><a href="clientes.html" class="i-active"><i class="ftn icon-clientes"></i><small>Clientes</small></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div><!--NAV SIDEBAR-->
+
+
+	<div class="container-fluid container-data">
+
+		<div class="row  margin-t-md">
+			<div class="col-md-12">
+				<a href="#" class="btn b-generico b-n-cliente text-center" data-toggle="modal" data-target="#ModalCliente"><i class="ftn icon-clientes"></i>Nuevo Cliente</a>
+			</div>
+			<div class="col-md-12 margin-t-xxs">
+				<div class="panel panel-default">
+					<div class="panel-heading">LISTADO DE CLIENTES</div>
+					<div class="panel-body">
+
+						
+						<table class="table table-responsive tree">
+							<colgroup>
+							<col width="20%" />
+							<col width="20%" />
+							<col width="40%" />
+							<col width="10%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Cliente</th>
+								<th class="text-center">Geocercas</th>
+								<th class="text-center">Direcciones</th>
+								<th class="text-center">Documentos</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="treegrid-1">
+								<td>Supermercados Tottus</td>
+								<td class="text-center">5</td>
+								<td class="text-center"></td>
+								<td class="text-center"><a href="listaDocumentos.html">28</a></td>
+								<td class="text-right">
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target="#ModalCliente"><i class="fa fa-pencil"></i></button>
+										<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+									</div>
+								</td>
+							</tr><!--TOTTUS-->
+							<tr class="treegrid-2 treegrid-parent-1">
+								<td>Tottus Alameda</td>
+								<td class="text-center">Tottus-Alameda</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="listaDocumentos.html">7</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-3 treegrid-parent-1">
+								<td>Tottus Ñuñoa</td>
+								<td class="text-center">Tottus-Nunoa</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">7</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-4 treegrid-parent-1">
+								<td>Tottus Providencia</td>
+								<td class="text-center">Tottus-Providencia</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">7</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-5 treegrid-parent-1">
+								<td>Tottus Pajaritos</td>
+								<td class="text-center">Tottus-Pajatiros</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">7</a></td>
+								<td class="text-right"></td>
+							</tr><!--CLIENTE 1-->
+
+							<tr class="treegrid-6">
+								<td>Hipermercados Lider</td>
+								<td class="text-center">4</td>
+								<td class="text-center"></td>
+								<td class="text-center"><a href="#">50</a></td>
+								<td class="text-right">
+									<div class="btn-group" role="group">
+										<button type="button" class="btn btn-default" data-toggle="modal" data-target="#ModalCliente"><i class="fa fa-pencil"></i></button>
+										<button type="button" class="btn btn-default"><i class="fa fa-trash alerta"></i></button>
+									</div>
+								</td>
+							</tr><!--LIDER-->
+							<tr class="treegrid-7 treegrid-parent-6">
+								<td>Lider Alameda</td>
+								<td class="text-center">Lider-Alameda</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">10</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-8 treegrid-parent-6">
+								<td>Lider Pajaritos</td>
+								<td class="text-center">Lider-Pajaritos</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">5</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-9 treegrid-parent-6">
+								<td>Lider Providencia</td>
+								<td class="text-center">Lider-Providencia</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">20</a></td>
+								<td class="text-right"></td>
+							</tr>
+							<tr class="treegrid-10 treegrid-parent-6">
+								<td>Lider Ñuñoa</td>
+								<td class="text-center">Lider-Nunoa</td>
+								<td class="text-center">Avenida Liber Bernardo O'higgins 3470 Estación Central</td>
+								<td class="text-center"><a href="#">15</a></td>
+								<td class="text-right"></td>
+							</tr><!--CLIENTE 2-->
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div><!--LINEA 1-->
+
+	<!--MODAL-->
+	<div id="ModalCliente" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="EditarCliente">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<form action=""  class="form-horizontal">
+					<div class="modal-header">
+						<div class="form-group">
+							<label for="" class="col-md-2 col-md-offset-1 control-label">Nombre Cliente</label>
+							<div class="col-md-6"><input type="text" class="form-control"></div>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-11 text-right"><a href="#" id="btn-add-item" class="btn btn-link"><i class="fa fa-plus-square"></i> Agregar Ubicación</a></div>
+								<div class="col-md-6 col-md-offset-1"><label for="">Dirección</label></div>
+								<div class="col-md-4"><label for="">Geocerca</label></div>
+							</div><!--GLOSA-->
+
+							<div class="row row-item">
+								<div class="col-md-6 col-md-offset-1"><input type="text" class="form-control"></div>
+								<div class="col-md-4">
+									<select name="" id="" class="form-control">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[GEOCERCA]</option>
+									</select>
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+
+							<div class="row row-item">
+								<div class="col-md-6 col-md-offset-1"><input type="text" class="form-control"></div>
+								<div class="col-md-4">
+									<select name="" id="" class="form-control">
+										<option value="Seleccione" selected>Seleccione...</option>
+										<option value="">[GEOCERCA]</option>
+									</select>
+								</div>
+								<div class="col-md-1"><a href="#" id="btn-del-geo" class="btn alerta"><i class="fa fa-trash fa-lg"></i></a></div>
+							</div>
+						</div><!--ROW-ITEM-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-link" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn b-generico" data-dismiss="modal">Crear</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--MODAL-->
+</div>
+<!--JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script src="assets/js/jquery.treegrid.boostrap.js"></script>
+<script src="assets/js/jquery.treegrid.min.js"></script>
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="assets/js/bootstrap-filestyle.min.js"></script>
+
+<script src="assets/js/funciones.js"></script>
+
+<script>
+	$("#m-admin > ul.sub-menu").slideToggle(500);
+</script>
+
+</body>
+</html>

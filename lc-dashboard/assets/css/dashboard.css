@@ -1,0 +1,749 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+
+
+body{
+	background: #e7e7e7;
+	font:14px "Roboto";
+	color:#8a8a8a;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+a.navbar-brand {
+	background: #0a2224;
+	border-bottom:0;
+	color:#e77e2b!important;
+	font-size: 32px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin-left: -15px;
+	width:100px;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+a.navbar-brand:hover{
+	background: #030e0f!important;
+}
+
+.navbar-fixed-top{
+	border-bottom:0;
+}
+
+/***************************/
+/***** NAV USUARIO *********/
+/***************************/
+a.nav-usuario{
+	padding-top:10px;
+	text-decoration: none;
+}
+
+a.nav-usuario span{
+	opacity:0;
+	padding-top: 5px;
+	padding-right:10px;
+	display:inline-block;
+	vertical-align: top;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+a.nav-usuario .ftn{
+	font-size:28px;
+	color: #204b4f;
+	margin-right: 10px;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+a.nav-usuario:hover .ftn{
+	color:#e77e2b;
+}
+
+a.nav-usuario:hover span{
+	color:#e77e2b;
+	padding-right:0px;
+	opacity:1;
+}
+
+
+
+
+
+
+/***************************/
+/***** SIDE NAVBAR *********/
+/***************************/
+.nav-dashboard{
+	background: #102d30;
+	color:#fff;
+	height:100vh;
+	z-index:9;
+	position:fixed;
+	width:100px;
+	padding-top: 51px;
+}
+.nav-dashboard ul{
+	list-style: none;
+	margin-left:0;
+	padding-left: 0;
+}
+
+.nav-dashboard ul li{
+	border-bottom:1px solid #183c40;
+}
+
+.nav-dashboard ul li .ftn{
+	font-size: 32px;
+	text-decoration: none;
+}
+
+.nav-dashboard ul li a{
+	color:#586c6f;
+	display:block;
+	text-align: center;
+	align-items:center;
+	justify-content:center;
+	padding-top:5px;
+	padding-bottom:10px;
+	position:relative;
+	z-index: 0;
+	transition: color 0.3s ease-in-out 0s;
+	transition: background-color 0.3s ease-in-out 0s;
+}
+
+.nav-dashboard ul li a small{
+	clear:both;
+	display:block;
+}
+
+
+.nav-dashboard ul li a:hover, .nav-dashboard ul li a.i-active:hover{
+	background-color: #0a2224;
+	color:#fff;
+	text-decoration: none;
+}
+
+.open, .open:active, .open a{
+	color:#fff;
+	text-decoration: none;
+}
+
+
+.nav-dashboard ul li a:hover span{
+	color:#fff;
+	opacity:0.8;
+	left:80px;
+	visibility:visible;
+}
+
+.sub-menu{
+	display:none;
+	margin-bottom: 0;
+}
+.sub-menu li a{
+	background: #030d0e;
+}
+
+.sub-menu li:last-child{
+	border-bottom:none;
+}
+
+/*ITEM ACTIVO*/
+.i-active{
+	background: url(../img/caret.png) no-repeat center right;
+	color:rgba(255,255,255,.7)!important;
+}
+
+.sub-menu a.i-active{
+	background: url(../img/caret.png) no-repeat center right #030d0e;
+	color:rgba(255,255,255,.7)!important;
+}
+
+/***************************/
+/***** CONT. GENERAL *******/
+/***************************/
+.wrp-items{
+	overflow: auto;
+	height: 300px;
+}
+
+.doc-list.wrp-items{
+	overflow: auto;
+	height: 620px;
+}
+
+.container-data{
+	margin-left:110px;
+	margin-right:10px;
+
+}
+
+/***************************/
+/***** RESUMEN *************/
+/***************************/
+.box-resumen{
+	height:100px;
+}
+
+
+/***************************/
+/***** MARGENES ************/
+/***************************/
+.margin-t-xxs{
+	margin-top: 15px;
+}
+
+.margin-t-xs{
+	margin-top: 20px;
+}
+
+.margin-t-md{
+	margin-top: 70px;
+}
+
+.margin-t-lg{
+	margin-top: 110px;
+}
+
+
+
+
+/***************************/
+/***** PANELES**************/
+/***************************/
+
+.panel-heading{
+	background: #e3e3e3!important;
+	padding:6px!important;
+	color:#8a8a8a!important;
+	font-weight: 500;
+}
+
+.panel-body h2.data-num{
+	color:#0a2224;
+	font-size: 28px;
+	margin:0; 
+}
+
+.panel-body small.data-text{
+	color:#a0a0a0;
+	font-size:12px;
+	line-height:120%;
+}
+
+
+.alerta{
+	color: #e4483e!important;
+}
+
+.date{
+	color:#486b6f;
+}
+
+
+
+/***************************/
+/***** GRAFICOS ************/
+/***************************/
+#rechazos svg{
+	height:170px;
+	outline:1px solid red;
+}
+
+#rechazos>div{
+	overflow:hidden;
+	height:170px;
+}
+
+
+#nEntregados, #onTime{
+	display:inline-block;
+	height:24px;
+	margin-left:5px;
+	width:24px;
+}
+
+#dTotal, 
+#dRuta, 
+#dProgreso, 
+#dEntregados, 
+#dPendientes, 
+#dParciales, 
+#dRechazados, 
+#dOnTime{
+	display:block;
+	height: 100px;
+	margin:5px auto;
+	overflow: hidden;
+	width:100px;
+}
+
+
+
+/***************************/
+/***** TABLAS***************/
+/***************************/
+
+table{
+	font-size:12.5px;
+	font-weight: 400;
+}
+
+
+.table-estado > tbody > th{
+	background: #efefef;
+	border-bottom:2px solid #ddd;
+	border-top:2px solid #ddd!important;
+}
+
+tr.header > th:first-child{
+	border-right:1px solid #FFF;
+}
+
+table.table-estado > thead > tr > th{
+	background: #FFF;
+	border:0!important;
+}
+
+table > thead > tr > th, 
+table.table-estado > tbody > tr > th{
+	color:#1c474b;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.filaActiva{
+	background: #fffac4;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.table-detalle-docs > tbody > tr > td, 
+.table-detalle-docs > tbody > tr > th{
+	border-top: none;
+	border-bottom: 1px solid #ddd;;
+}
+
+.table-detalle-docs th{
+	color:#1c474b;
+}
+
+.t-detalle-doc{
+	margin-top: 30px;
+}
+
+.t-detalle-doc > thead > tr > th{
+	background: #e3e3e3;
+}
+
+.row-items{
+	background: #efefef;
+}
+
+.doc-list > .t-detalle-doc{
+	margin-top: 10px;
+}
+
+/***************************/
+/***** PANEL DETALLE *******/
+/***************************/
+
+.detalle{
+	background: #FFF;
+	box-shadow: 0 0 5px 0 #999;
+	height: 100vh;
+	padding-top:20px;
+	position: fixed;
+	right: -50%;
+	width:50%;
+	z-index: 9999;
+	transition: all 1s ease 0s;
+}
+
+.detalle.activo{
+	right: 0;
+}
+
+.panel-heading{
+	color:#1c474b!important;
+}
+
+.alert{
+	display:none;
+	margin-bottom:20px;
+	margin-top: 20px;
+}
+
+.alert .fa{
+	margin-right:5px;
+	vertical-align: middle;
+}
+
+/***************************/
+/***** GOOGLE MAP **********/
+/***************************/
+
+#g-map{
+	border:5px solid #ededed;
+	min-height: 300px;
+	width:100%;
+	padding:10px;
+}
+
+/***************************/
+/***** MEDIA QUERYS ********/
+/***************************/
+@media (min-width: 1900px){
+	#g-map {
+		height: 550px;
+	}    
+}
+
+/***************************/
+/***** BOTONES *************/
+/***************************/
+.b-generico{
+	background: #1c474b;
+	color:#FFF;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.b-generico:hover, .b-generico:active{
+	background: #0a2224;
+	color:#FFF!important;
+}
+
+.sel-filtro{
+	background: #FFF;
+	border: 1px solid #ccc;
+}
+
+.b-buscar{
+	padding:0px;
+}
+.b-buscar .ftn{
+	font-size:16px;
+}
+
+.b-volver{
+	font-size: 18px;
+	margin-right:15px;
+	margin-top:6px;
+}
+
+.b-colapsar{
+	font-size: 18px;
+}
+
+.b-descargar{
+	padding:2px 20px 2px 5px;
+	text-align: center;
+	color:#1c474b;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.b-descargar:hover{
+	color:#ef8c1f;
+}
+
+.b-n-cliente .ftn,.b-descargar .ftn{
+	font-size:24px;
+	vertical-align: sub;
+}
+
+.b-n-cliente{
+	padding: 0 10px!important;
+	font-size: 14px;
+}
+
+.b-sel-file{
+	background: #1c474b;
+	color:#FFF;
+	padding:4px 10px 5px 10px!important;
+	border-radius: 0 5px 5px 0;
+
+}
+
+.b-sel-file:hover{
+	background: #1c474b;
+	color:#FFF;
+}
+
+.b-sel-file > .glyphicon{
+	margin-right: 0px;
+	font-size: 18px;
+}
+
+.add-doc{
+	border-radius: 5px 0 0 5px!important;
+	height: 34px;
+	margin-right:1px;
+	padding:4px 20px 3px 20px!important;
+}
+
+.add-doc .ftn{
+	font-size:17px;
+}
+
+/***************************/
+/***** FILTROS **********/
+/***************************/
+#filtros{
+	background: #f8f8f8;
+	border-top:1px solid #E7E7E7;
+	box-shadow: 0 0 5px 0 #ccc;
+	margin-top: 50px;
+	margin-left: 0;
+	padding-top:5px;
+	padding-bottom:5px;
+	position: fixed;
+	width:100%;
+	z-index: 1;
+}
+#filtros form{
+	margin-left: 115px;
+}
+
+#filtros form .form-control{
+	height: 26px;
+}
+
+.form-group{
+	margin-right:10px;
+}
+
+.label-arriba{
+	clear:both;
+	display:none;
+	margin-bottom:1px;
+}
+
+.btn{
+	padding:2px 4px;
+}
+
+.doc-select, .doc-select .sel-filtro{
+	font-size: 18px;
+}
+
+.doc-select label{
+	color:#1c474b;
+}
+
+.doc-select .sel-filtro{
+	vertical-align: middle;
+	margin-top:6px;
+}
+
+/***************************/
+/********* TIMELINE ********/
+/***************************/
+
+.tl-container:before, .tl-container:after{
+	background: #1c474b;
+	border-radius: 50%;
+	content: " ";
+	display:block;
+	height: 8px;
+	margin-left: 11px;
+	margin-top:-5px;
+	position: relative;
+	width:8px;
+}
+.tl-container:after{
+	margin-top:-10px;
+}
+
+.tl-container{
+	background: url(../img/vertical-timeline.png) repeat-y 15px 0;
+	width:250px;
+	list-style: none;
+
+}
+.tl-container .evento{
+	background: #e3e3e3;
+	box-shadow: 0 0 3px 1px #ccc;
+	border-radius: 5px;
+	margin-left:50px;
+	margin-bottom: 10px;
+	padding:5px 5px 1px 20px;
+}
+
+.tl-container .evento small{
+	background:#b3b3b3;
+	border-radius: 3px;
+	color:#FFF;
+	font-size: 12px;
+	padding: 1px 3px;
+	width: auto;
+}
+
+.tl-container .evento p{
+	color:#1c474b;
+	font-size: 14px;
+	margin-bottom:5px;
+}
+
+.tl-container .evento:before{
+	background: #1c474b;
+	display:block;
+	height: 1px;
+	width:35px;
+	content: "";
+	position: relative;
+	left:-55px;
+	top:18px;
+}
+
+
+/***************************/
+/********* MODAL *********/
+/***************************/
+#n-doc .modal-body, #ModalCliente .modal-body{
+	height: 450px;
+	max-height:450px;
+	overflow: auto;
+	padding: 30px 15px 15px 15px;
+}
+
+#n-doc .modal-header{
+	border-bottom: none;
+	background:#e7e7e7;
+	border-radius: 5px 5px 0 0;
+	padding:30px 0 0 0;
+}
+
+#n-doc .nav-tabs{
+	text-align: center;
+}
+
+#n-doc .nav-tabs > li{
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	text-transform: uppercase;
+	width:250px;
+	zoom:1; /* hasLayout ie7 trigger */
+}
+
+.row-item{
+	margin-bottom:10px;
+}
+
+
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:focus, 
+.nav-tabs > li.active > a:hover {
+	border-radius: 0;
+	font-weight: 700;
+}
+
+#n-doc .modal-footer, #ModalCliente .modal-footer{
+	text-align: center;
+}
+
+#n-doc .modal-footer .btn, #ModalCliente .modal-footer .btn{
+	font-size:16px;
+	padding:5px 20px;
+}
+
+#ModalCliente .modal-header{
+	background: #efefef;
+	border-radius: 5px 5px 0 0;
+}
+
+#ModalCliente .modal-header .form-group{
+	margin-bottom:0;
+	margin-top:10px;
+}
+
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:9999;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+
+/*MODAL ADD ITEM*/
+
+.addItem{
+	background:#efefef;
+	box-shadow: 0 0 3px #999;
+	border-radius:5px;
+	display:none;
+	position: absolute;
+	padding: 30px 15px;
+	top:195px;
+	right: 90px;
+	width:500px;
+	z-index:99999;
+}
+
+.addItem .cont-btn{
+	margin-top: 15px;
+}
+
+.addItem .cont-btn .btn{
+	margin:0 5px;
+}
+
+.addItem .cont-btn .b-generico{
+	padding:3px 10px;
+}
+
+/*.addItem:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #efefef;
+	border-width: 10px;
+	margin-left: 180px;
+}*/
+
+/***************************/
+/********* ENTREGAS *********/
+/***************************/
+
+.exitosa{
+	color:#61b371;
+}
+
+.reparos, .parcial{
+	color: #ef8c1f;
+}
+
+.rechazo{
+	color: #e4483e;
+}
+
+
+/***************************/
+/******* CALENDARIO ********/
+/***************************/
+
+#calEventos{
+	background: #ededed;
+	display:none;
+	height: 250px;
+	margin-bottom: 10px;
+}
+
+#mostrarCalendario{
+	
+}
