@@ -3,6 +3,18 @@ $(document).ready(function(){
 	//TOOLTIP
 	$('[data-toggle="tooltip"]').tooltip();
 
+	//MUESTRA LOADING
+	$('.data-num').click(function(){
+		$('.loading').fadeIn('slow');
+
+		var timerLoading = setInterval(function(){
+			$('.loading').fadeOut('slow');
+
+		},3000, function(){
+			clearInterval('timerLoading');
+		});
+	})
+
 	//CALENDARIO
 	$('a#mostrarCalendario').click(function(){
 		$('#calEventos').slideToggle();
@@ -86,7 +98,6 @@ $(document).ready(function(){
 			return $table.closest('.wrp-items');
 		}
 	});
-
 });
 
 
