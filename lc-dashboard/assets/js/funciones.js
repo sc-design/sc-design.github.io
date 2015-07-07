@@ -7,13 +7,12 @@ $(document).ready(function(){
 	$('.data-num').click(function(){
 		$('.loading').fadeIn('slow');
 
-		var timerLoading = setInterval(function(){
+		function ocultaLoading(){
 			$('.loading').fadeOut('slow');
+		}
 
-		},3000, function(){
-			clearInterval('timerLoading');
-		});
-	})
+		setTimeout(ocultaLoading, 3000);
+	});
 
 	//CALENDARIO
 	$('a#mostrarCalendario').click(function(){
