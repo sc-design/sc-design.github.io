@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<style>
+		div {
+			position: relative;
+			width: 32px;
+			height: 35px;
+			overflow: hidden;
+			outline:1px solid red;
+		}
+
+		div img {
+			position: absolute;
+			opacity: 0;
+		}
+
+		div img:nth-child(1) { animation-delay: 0 }
+		div img:nth-child(2) { animation-delay: 1s }
+		div img:nth-child(3) { animation-delay: 2s } 
+		div img:nth-child(4) { animation-delay: 3s }
+
+		div img {
+			animation-iteration-count: infinite;
+			animation-name: opacidad;
+			animation-duration: .8s;
+		}
+
+		@keyframes opacidad {
+			from { opacity: 0 }
+			50% { opacity: 1 }
+			to { opacity: 0 }
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="senal1.png">
+		<img src="senal2.png">
+		<img src="senal3.png">
+		<img src="senal4.png">
+	</div>
+</body>
+</html>
